@@ -1,9 +1,13 @@
 import os
-import discord
-import asyncio
 import sys
+import asyncio
+import discord
+from dotenv import load_dotenv
 
-# Configuration (Set these in Railway Variables)
+# Load environment variables automatically (from .env file locally, or system variables on Railway)
+load_dotenv()
+
+# Configuration (Set these in Railway Variables or a local .env file)
 TOKEN = os.getenv("TOKEN")
 OWNER_ID_STR = os.getenv("OWNER_ID")
 OWNER_ID = int(OWNER_ID_STR) if OWNER_ID_STR else None
